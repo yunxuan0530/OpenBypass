@@ -2,8 +2,6 @@
 A fully free &amp; open source iOS bypass application written in C#.
 
 
-### **IF YOU USE ANY CODE FROM THIS REPOSITORY IN YOUR PROJECT, YOU MUST CREDIT THE PROJECT AND KEEP YOUR APP OPEN SOURCE ASWELL. FAILURE TO DO SO WILL RESULT IN A DMCA**
-
 # What is OpenBypass?
 
 OpenBypass is a solution to the large amount of bypass applications that are extremely low effort & constantly break. This project aims to unify all (or most) iOS bypass applications into one app to reduce both possible errors as well as create a more coherent solution for the user.
