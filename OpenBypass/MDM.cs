@@ -26,7 +26,7 @@ namespace OpenBypass
             scpClient.Connect();
             sshclient.CreateCommand("rm -rf /var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/*").Execute();
             sshclient.CreateCommand("killall backboardd && sleep 7").Execute();
-            scpClient.Upload(new FileInfo(Application.StartupPath + "/Reference/mdm"), "/var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/CloudConfigurationDetails.plist");
+            scpClient.Upload(new FileInfo(Application.StartupPath + "/Required/mdm"), "/var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/CloudConfigurationDetails.plist");
             sshclient.CreateCommand("chflags uchg /var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles/Library/ConfigurationProfiles/CloudConfigurationDetails.plist").Execute();
             sshclient.CreateCommand("killall backboardd").Execute();
             sshclient.Disconnect();
@@ -49,7 +49,7 @@ namespace OpenBypass
                 {
                     StartInfo =
                         {
-                            FileName = Environment.CurrentDirectory + "/Reference/iproxy.exe",
+                            FileName = Environment.CurrentDirectory + "/Required/iproxy.exe",
                             Arguments = "22 44",
                             UseShellExecute = false,
                             RedirectStandardOutput = true,
