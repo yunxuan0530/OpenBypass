@@ -27,7 +27,7 @@ namespace OpenBypass
                 sshclient.Connect();
                 scpClient.Connect();
                 sshclient.CreateCommand("mount -o rw,union,update /").Execute();
-                scpClient.Upload(new FileInfo(Application.StartupPath + "\\Reference\\erase.dll"), "/bin/erase");
+                scpClient.Upload(new FileInfo(Application.StartupPath + "\\Required\\erase.dll"), "/bin/erase");
                 sshclient.CreateCommand("cd /bin/erase").Execute();
                 sshclient.CreateCommand("chmod 755  /bin/erase").Execute();
                 MessageBox.Show("Device erased!");
@@ -115,7 +115,7 @@ namespace OpenBypass
                 {
                     StartInfo =
                         {
-                            FileName = Environment.CurrentDirectory + "/Reference/iproxy.exe",
+                            FileName = Environment.CurrentDirectory + "/Required/iproxy.exe",
                             Arguments = "22 44",
                             UseShellExecute = false,
                             RedirectStandardOutput = true,
